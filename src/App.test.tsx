@@ -1,17 +1,3 @@
-// import React from 'react';
-// import { render, screen } from '@testing-library/react';
-// import App from './App';
-
-// test('renders App component with initial content', () => {
-//   render(<App />);
-//   expect(screen.getByText('React App with SCSS')).toBeInTheDocument();
-//   expect(
-//     screen.getByText(
-//       'This is a simple React application demonstrating various concepts.'
-//     )
-//   ).toBeInTheDocument();
-//   expect(screen.getByText('React Tutorial for Beginners')).toBeInTheDocument();
-// });
 import React from 'react';
 import { render, screen } from '@testing-library/react';
 import App from './App';

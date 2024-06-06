@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from '../styles/ShimmerUI.module.scss';
 
-const ShimmerUI = () => {
+const ShimmerUI: React.FC = () => {
   return (
     <div className={styles.shimmerWrapper}>
       <div className={styles.shimmer}></div>

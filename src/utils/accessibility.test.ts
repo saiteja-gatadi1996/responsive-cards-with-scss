@@ -1,10 +1,13 @@
 import { focusElement } from './accessibility';
 
+import { vi } from 'vitest';
+
+const mockNavigate = vi.fn();
 describe('focusElement', () => {
   test('sets tabindex to -1 and focuses the element', () => {
     // Create a mock element with necessary methods
     const element = document.createElement('div');
-    element.focus = jest.fn();
+    element.focus = mockNavigate;
 
     // Call the function
     focusElement(element);

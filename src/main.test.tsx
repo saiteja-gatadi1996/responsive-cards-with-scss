@@ -1,15 +1,20 @@
 import React from 'react';
 import { render } from '@testing-library/react';
 import App from './App';
-import { createRoot } from 'react-dom/client';
+import { vi } from 'vitest';
 
 // Mock the createRoot and its methods
-jest.mock('react-dom/client', () => ({
-  createRoot: jest.fn().mockImplementation(() => ({
-    render: jest.fn(),
-    unmount: jest.fn(),
-  })),
-}));
+vi.mock('react-dom/client', () => {
+  const mockNavigate = vi.fn();
+  return {
+    createRoot: () => ({
+      render: mockNavigate,
+      unmount: mockNavigate,
+    }),
+  };
+});
+
+import { createRoot } from 'react-dom/client';
 
 test('renders App component without crashing', () => {
   const rootElement = document.createElement('div');

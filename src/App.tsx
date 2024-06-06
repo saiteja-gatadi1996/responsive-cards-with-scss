@@ -1,11 +1,11 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState } from 'react';
 import './styles/Global.scss';
 import Layout from './components/Layout';
 import ShimmerUI from './components/ShimmerUI';
 import Typography from './components/Typography';
 import YouTubeCard from './components/YouTubeCard';
 
-const App = () => {
+const App: React.FC = () => {
   const [videos, setVideos] = useState([
     {
       title: 'React Tutorial for Beginners',
@@ -103,9 +103,7 @@ const App = () => {
       title: 'Storybook for UI Development',
       description: 'Build and document UI components with Storybook.',
     },
-    
   ]);
-
   return (
     <Layout>
       <Typography variant='h1'>React App with SCSS</Typography>
@@ -121,6 +119,7 @@ const App = () => {
             key={index}
             title={video.title}
             description={video.description}
+            imageUrl={video.imageUrl}
           />
         ))}
       </div>
