@@ -1,0 +1,36 @@
+.layout {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+}
+
+/* Media Queries */
+
+/* Mobile Devices */
+@media (max-width: 599px) {
+  .layout {
+    padding: 10px;
+  }
+}
+
+/* Tablets */
+@media (min-width: 600px) and (max-width: 1023px) {
+  .layout {
+    padding: 15px;
+  }
+}
+
+/* Laptops */
+@media (min-width: 1024px) and (max-width: 1439px) {
+  .layout {
+    padding: 20px;
+  }
+}
+
+/* Desktops */
+@media (min-width: 1440px) {
+  .layout {
+    padding: 25px;
+  }
+}

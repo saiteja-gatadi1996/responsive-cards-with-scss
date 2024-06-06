@@ -1,0 +1,95 @@
+.card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  overflow: hidden;
+  margin: 10px;
+  flex: 1 1 calc(25% - 20px);
+  box-sizing: border-box;
+  transition: transform 0.3s;
+  height: 200px; /* Fixed height */
+}
+
+.card:hover {
+  transform: scale(1.02);
+}
+
+.content {
+  padding: 10px;
+  height: 100%; /* Ensures content takes full height */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+h3 {
+  margin: 0 0 10px 0;
+  font-size: 1.2em;
+}
+
+p {
+  margin: 0;
+  font-size: 0.9em;
+  color: #555;
+}
+
+/* Media Queries */
+
+/* Mobile Devices */
+@media (max-width: 599px) {
+  .card {
+    flex: 1 1 calc(100% - 20px);
+  }
+
+  h3 {
+    font-size: 1em;
+  }
+
+  p {
+    font-size: 0.8em;
+  }
+}
+
+/* Tablets */
+@media (min-width: 600px) and (max-width: 1023px) {
+  .card {
+    flex: 1 1 calc(50% - 20px);
+  }
+
+  h3 {
+    font-size: 1.1em;
+  }
+
+  p {
+    font-size: 0.85em;
+  }
+}
+
+/* Laptops */
+@media (min-width: 1024px) and (max-width: 1439px) {
+  .card {
+    flex: 1 1 calc(33.333% - 20px);
+  }
+
+  h3 {
+    font-size: 1.2em;
+  }
+
+  p {
+    font-size: 0.9em;
+  }
+}
+
+/* Desktops */
+@media (min-width: 1440px) {
+  .card {
+    flex: 1 1 calc(25% - 20px);
+  }
+
+  h3 {
+    font-size: 1.3em;
+  }
+
+  p {
+    font-size: 1em;
+  }
+}
