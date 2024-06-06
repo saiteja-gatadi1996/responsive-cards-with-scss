@@ -1,17 +1,11 @@
 import React, { forwardRef } from 'react';
 import styles from '../styles/YoutubeCard.module.scss';
-
-interface YouTubeCardProps {
-  title: string;
-  description: string;
-  imageUrl: string;
-}
+import { YouTubeCardProps } from '../utils/interfaces';
 
 const YouTubeCard = forwardRef<HTMLDivElement, YouTubeCardProps>(
-  ({ title, description, imageUrl }, ref) => {
+  ({ title, description }, ref) => {
     return (
       <div className={styles.card} ref={ref}>
-        <img src={imageUrl} alt={title} className={styles.image} />
         <div className={styles.content}>
           <h3>{title}</h3>
           <p>{description}</p>
