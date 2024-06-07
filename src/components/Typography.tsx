@@ -1,4 +1,4 @@
-import React, { ReactNode } from 'react';
+import React from 'react';
 import styles from '../styles/Typography.module.scss';
 import { TypographyProps } from '../utils/interfaces';
 

@@ -1,4 +1,4 @@
-import React, { ReactNode } from 'react';
+import React from 'react';
 import styles from '../styles/Layout.module.scss';
 import { LayoutProps } from '../utils/interfaces';
 

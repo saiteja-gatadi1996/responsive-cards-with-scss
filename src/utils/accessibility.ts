@@ -1,4 +1,5 @@
-export const focusElement = (element) => {
-  element.setAttribute('tabindex', '-1');
-  element.focus();
+export const focusElement = (element: HTMLElement | null) => {
+  if (element) {
+    element.focus();
+  }
 };

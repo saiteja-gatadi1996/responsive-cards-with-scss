@@ -15,17 +15,24 @@ const config: Config = {
 
   // Map CSS modules to 'identity-obj-proxy' for mocking CSS imports in tests
   moduleNameMapper: {
-    '\\.(css|scss)$': 'identity-obj-proxy',
-    '\\.(css|less|scss|sass)$': 'identity-obj-proxy',
+    '\\.(css|less|scss|sass)$': '<rootDir>/__mocks__/styleMock.ts',
   },
   moduleDirectories: ['./node_modules', 'src'],
+
   // Setting up testing framework after environment setup
   setupFilesAfterEnv: ['@testing-library/jest-dom'],
 
   // Use jsdom as the testing environment
   testEnvironment: 'jsdom',
 
-  // More configurations can be added below as needed
+  // Use ts-jest preset to enable TypeScript support
+  preset: 'ts-jest',
+
+  // Ensure ts-node is used to execute TypeScript files
+  transform: {
+    '^.+\\.tsx?$': 'ts-jest',
+    '^.+\\.scss$': 'jest-css-modules-transform',
+  },
 };
 
 export default config;
